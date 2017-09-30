@@ -1,0 +1,33 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Sprites="clr-namespace:NeuralNetMineSweeper.Sprites" x:Class="NeuralNetMineSweeper.MainWindow"
+        Title="MainWindow" Height="702" Width="809" WindowStartupLocation="CenterScreen" MouseMove="Window_MouseMove">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Canvas x:Name="mainCanvas" Margin="0" Grid.Row="1"/>
+
+        <StackPanel x:Name="cbSlowDown" Orientation="Horizontal" VerticalAlignment="Top" Height="30">
+            <Button x:Name="btnStart" Content="Start" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="btnStart_Click"/>
+            <Button x:Name="btnStartGame" Content="Game" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="btnStartGame_Click" />
+            <Button x:Name="btnStop" Content="Stop" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="btnStop_Click" />
+            <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="btnSave_Click" Visibility="Collapsed"/>
+            <Button x:Name="btnLoad" Content="Load" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="btnLoad_Click" Visibility="Collapsed" />
+            <Button x:Name="btnReset" Content="Reset" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="btnReset_Click" Visibility="Collapsed"/>
+            <CheckBox x:Name="chkSlow" Content="Slow down" Click="chkSlow_Click"/>
+            <CheckBox x:Name="chkRender" Content="Render" Click="chkRender_Click" IsChecked="True" />
+            <TextBox x:Name="txtFileName" TextWrapping="Wrap" Text="Sweepers.xml" Width="120"/>
+            <Label x:Name="labelFrame" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="44"/>
+            <Label x:Name="labelEpochDuration" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="53"/>
+            <Label x:Name="labelTotalFitness" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="64"/>
+            <Label x:Name="labelAverageFitness" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="44"/>
+
+
+        </StackPanel>
+        <ComboBox x:Name="ComboSelectThread" HorizontalAlignment="Left" Margin="0,28,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboSelectThread_SelectionChanged"/>
+
+    </Grid>
+</Window>
